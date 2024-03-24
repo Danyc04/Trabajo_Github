@@ -1,3 +1,8 @@
 """ Diseño codigo para app"""
 "Buenas tardes"
-"Integrantes Daniela/Daniel/Johan"
+'''
+Integrantes:
+Daniela Cerquera
+Daniel Baquero
+Johan Peñaloza
+'''
