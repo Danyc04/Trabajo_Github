@@ -17,11 +17,9 @@ central_arriba = dbc.Container([
 
 central_abajo = dbc.Container([
     dbc.Row([
-        dbc.Col(dcc.Checklist(["  Hotel"]), md=3, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
-        dbc.Col(dcc.Checklist(["  Vuelos"]), md=3, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
-        dbc.Col(dcc.Checklist(["  Carro"]), md=3, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
-        dbc.Col(dcc.Checklist(["  Taxis aeropuerto"]), md=3, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
-        ]),
+        dbc.Col(dcc.Checklist(["  Hotel"]), md=6, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
+        dbc.Col(dcc.Checklist(["  Vuelos"]), md=6, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
+       ]),
     dbc.Row([
         dbc.Col("Seleccione los servicios a reservar", md=12),
         ])
