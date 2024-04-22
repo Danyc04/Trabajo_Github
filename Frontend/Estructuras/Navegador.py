@@ -1,11 +1,12 @@
-from dash import html
+from dash import html, dcc
 import dash_bootstrap_components as dbc
 
 global var_navegador
 
 var_navegador = dbc.Container([
-    dbc.Row([
-        dbc.Col("Logo", md=3, style={'border': f'2px solid indigo', 'color':'indigo'}),
-        dbc.Col('Desplegable, ?, y Login', md=9, style={'background-color': 'darkorchid', 'color':'lavenderblush'})
-    ])
+    html.H5(dbc.Row([
+        dbc.Col("Cotiza Ya", md=3, style={'border': f'2px solid indigo', 'color':'indigo'}),
+        dbc.Col('Iniciar Sesion', md=5, style={'background-color': 'darkorchid', 'color':'lavenderblush'}),
+        dbc.Col(dcc.Dropdown(['USA', 'COP', 'EUR'], value= 'USA', style={'background-color': 'darkorchid', 'color': 'black'}), md=4),
+    ]))
 ])

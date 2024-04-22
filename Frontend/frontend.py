@@ -9,7 +9,7 @@ from .Estructuras.Central import central_abajo
 
 layout = dbc.Container([
     dbc.Row([
-        dbc.Col(var_navegador, md=12),
+        dbc.Col(var_navegador, md=12,style={'background-color': 'lavenderblush'}),
         dbc.Col(central_arriba, md=12,style={'background-color': 'lavenderblush'}),
         dbc.Col(central_abajo, md=12,style={'background-color': 'lavenderblush'}),
         dbc.Col(oferta_izq, md=6,style={'background-color': 'thistle'}),
