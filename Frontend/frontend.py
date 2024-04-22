@@ -13,6 +13,6 @@ layout = dbc.Container([
         dbc.Col(central_arriba, md=12,style={'background-color': 'lavenderblush'}),
         dbc.Col(central_abajo, md=12,style={'background-color': 'lavenderblush'}),
         dbc.Col(oferta_izq, md=6,style={'background-color': 'thistle'}),
-        dbc.Col(oferta_der, md=6,style={'background-color': 'plum'})
+        dbc.Col(oferta_der, md=6, style={'background-color': 'plum'}),
     ])
 ])

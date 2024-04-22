@@ -15,19 +15,16 @@ central_arriba = dbc.Container([
             ['Personas','1','2','3','4','5'],
             value = "Personas"),
             md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
-        dbc.Col("Buscar", md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'})
+        dbc.Col(dcc.Dropdown(
+            ['Dias','1','2','3','4','5'],
+            value = "Dias"),
+            md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
         ])),
-    dbc.Row([
-        dbc.Col(dcc.Checklist(["Botón ida y regreso"]), md=12)
         ])
-    ])
+
 
 central_abajo = dbc.Container([
-    dbc.Row([
-        dbc.Col(dcc.Checklist(["  Hotel"]), md=6, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
-        dbc.Col(dcc.Checklist(["  Vuelos"]), md=6, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
-       ]),
-    dbc.Row([
-        dbc.Col("Seleccione los servicios a reservar", md=12),
-        ])
+    html.H2(dbc.Row([
+        dbc.Col(dcc.Checklist(["  Buscar  "],style={'textAlign': 'center'}), md=12, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
+       ])),
     ])
