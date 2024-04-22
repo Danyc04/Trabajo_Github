@@ -1,61 +1,11 @@
-import geopandas as gpd
-import plotly.express as px
-import plotly.graph_objects as go
+import pandas as pd
 
 #importamos el archivo de departamentos
-cotizacion = gpd.read_file()
+cotizacion = pd.read_csv('Trabajo\\bd\\precios.csv')
+print(cotizacion)
 
-def consultarCotizacion(cotizado):
+
+def consultarCotizacion(ciudad_buscada):
     #hacemos consulta del departamento buscado
-    busqueda_ciudad = colegios.query(f"DeNombre == '{departamento_consultado.upper()}'")
-    if cotizacion 
-    #hacemos la intersección
-    rios_departamento_buscado = gpd.overlay(departamento_buscado , rios, how='intersection')
-    #hacemos busqueda colegio por departamento buscado
-    colegios_departamento_buscado = colegios.query(f"DeNombre == '{departamento_consultado.upper()}'")
-        
-
-    #hacemos un buffer de los rios
-    rios_departamento_buscado["buffer"] = rios_departamento_buscado.buffer(50)
-
-    #hacemos otra intersección
-    colegios_afectados = gpd.overlay(
-        colegios_departamento_buscado,
-        rios_departamento_buscado.set_geometry("buffer"),
-        how='intersection')
-
-    rios_departamento_buscado_4326 = rios_departamento_buscado.to_crs(epsg=4326)
-    rios_departamento_buscado_4326['buffer'] = rios_departamento_buscado_4326['buffer'].to_crs(epsg=4326)
-    colegios_afectados_4326 = colegios_afectados.to_crs(epsg=4326)
-
-
-    # Genera mapa de ríos
-    fig = px.choropleth_mapbox(
-        geojson=rios_departamento_buscado_4326['buffer'].geometry,
-        locations=rios_departamento_buscado_4326.index
-    )
-
-    # Agregar colegios al mapa
-    fig.add_trace(
-        go.Scattermapbox(
-            lat=colegios_afectados_4326.geometry.y,
-            lon=colegios_afectados_4326.geometry.x,
-            mode='markers',
-            marker=go.scattermapbox.Marker(
-                size=9,
-                color='red'
-            ),
-            text=colegios_afectados_4326['Nombre'],
-            hoverinfo='text'
-        )
-    )
-
-    # agregamos el mapa
-    fig.update_layout(
-        mapbox_style="open-street-map",
-        mapbox_zoom=5,
-        mapbox_center = {"lat": 4.6, "lon": -74},
-    )
-    
-    return fig
-
+    busqueda_ciudad = cotizacion.query(f"Destino == '{ciudad_buscada.upper()}'")
+    return busqueda_ciudad
