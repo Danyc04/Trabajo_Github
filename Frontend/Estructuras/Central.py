@@ -5,14 +5,14 @@ global central_arriba, central_abajo
 central_arriba = dbc.Container([
     html.H5(dbc.Row([
         dbc.Col(dcc.Dropdown(
-            ['Bogota'], value='origen'), md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
+            ['origen','Bogota'], value='origen'), md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
             dbc.Col(dcc.Dropdown(
-            ['Cartagena','Medellin','Barranquilla','Cali','Bucaramanga','Santa Marta'],
+            ['Destino','Cartagena','Medellin','Barranquilla','Cali','Bucaramanga','Santa Marta'],
             value= 'Destino'),
             md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
         dbc.Col(dcc.RadioItems(['Temp alta', 'Temp baja']), md=4, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
         dbc.Col(dcc.Dropdown(
-            ['1','2','3','4','5'],
+            ['Personas','1','2','3','4','5'],
             value = "Personas"),
             md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'}),
         dbc.Col("Buscar", md=2, style={'border': f'1px solid darkmagenta', 'color':'darkmagenta'})
