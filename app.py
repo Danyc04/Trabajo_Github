@@ -13,20 +13,21 @@ from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 
 from Frontend.frontend import layout
-from Backend.backend import cotizacion_unica
+from Backend.backend import consultarCotizacion
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 app.layout = layout
 
 @app.callback(
     Output('precio', 'children'),
+    Input('buscar', 'n_clicks'),
     Input('destino_consultado', 'value'),
+    Input('temporada', 'value'),
     Input('cantidad_personas','value'),
-    Input('cantidad_dias', 'value'),
-    State('buscar', 'n_clicks')
+    Input('cantidad_dias', 'value')
 )
 
-def entrada_datos(destino_consultado, cantidad_personas, cantidad_dias, n_clicks):
+def entrada_datos(n_clicks, destino_consultado, temporada, cantidad_personas, cantidad_dias):
     if n_clicks is None:
         raise PreventUpdate
     if destino_consultado is None:
@@ -35,7 +36,7 @@ def entrada_datos(destino_consultado, cantidad_personas, cantidad_dias, n_clicks
         return 'Ingrese la cantidad de pasajeros'
     if cantidad_dias is None:
         return 'Ingrese la cantidad de días a cotizar'
-    return cotizacion_unica(cantidad_personas, cantidad_dias)
+    return consultarCotizacion(destino_consultado, temporada, cantidad_personas, cantidad_dias)
 
 
 if __name__ =='__main__':
