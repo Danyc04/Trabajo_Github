@@ -3,9 +3,8 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 
 from Backend.backend import cotizacion
-ciudades_desplegable = pd.read_csv('Trabajo\\bd\\precios.csv')
 
-ciudades_lista = ciudades_desplegable['Destino'].tolist()
+ciudades_lista = cotizacion['Destino'].tolist()
 
 global central_arriba, central_abajo
 

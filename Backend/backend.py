@@ -2,7 +2,7 @@ import pandas as pd
 
 global cotizacion
 #importamos el archivo de departamentos
-cotizacion = pd.read_csv('Trabajo\\bd\\precios.csv')
+cotizacion = pd.read_csv('bd\precios.csv')
 print(cotizacion)
 
 
