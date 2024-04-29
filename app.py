@@ -19,7 +19,7 @@ app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.layout = layout
 
 @app.callback(
-    Output('precio', 'children'),
+    Output('costo', 'children'),
     Input('buscar', 'n_clicks'),
     Input('destino_consultado', 'value'),
     Input('temporada', 'value'),
@@ -30,12 +30,19 @@ app.layout = layout
 def entrada_datos(n_clicks, destino_consultado, temporada, cantidad_personas, cantidad_dias):
     if n_clicks is None:
         raise PreventUpdate
-    if destino_consultado is None:
-        return 'Seleccione su ciudad de destino'
-    if cantidad_personas is None:
-        return 'Ingrese la cantidad de pasajeros'
-    if cantidad_dias is None:
-        return 'Ingrese la cantidad de días a cotizar'
+    else:
+        if destino_consultado is None:
+            return html.Div('Seleccione su ciudad de destino', style={'fontSize': '20px'})
+        else:
+            if temporada is None:
+                return html.Div('Seleccione la temporada a viajar', style={'fontSize': '20px'})  
+            else:
+                if cantidad_personas is None:
+                    return html.Div('Ingrese la cantidad de pasajeros', style={'fontSize': '20px'})
+                else:
+                    if cantidad_dias is None:
+                        return html.Div('Ingrese la cantidad de días a cotizar', style={'fontSize': '20px'})
+                    
     return consultarCotizacion(destino_consultado, temporada, cantidad_personas, cantidad_dias)
 
 

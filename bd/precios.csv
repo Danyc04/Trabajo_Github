@@ -1,13 +1,7 @@
-﻿Destino,Hotel,Temp_Alta,Temp_Baja
-Cartagena,si,1500000,1000000
-Cartagena,no,1000000,800000
-Medellin,si,1250000,900000
-Medellin,no,900000,600000
-Barranquilla,si,1120000,620000
-Barranquilla,no,1100000,540000
-Cali,si,750000,425000
-Cali,no,655000,375000
-Bucaramanga,si,685000,535000
-Bucaramanga,no,603000,463000
-Santa_Marta,si,1225000,1115000
-Santa_Marta,no,1000000,950000
+﻿Destino,Temp_Alta,Temp_Baja
+Cartagena,1500000,1000000
+Medellin,1250000,900000
+Barranquilla,1120000,620000
+Cali,750000,425000
+Bucaramanga,685000,535000
+Santa Marta,1225000,1115000
