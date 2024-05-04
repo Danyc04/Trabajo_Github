@@ -1,5 +1,5 @@
 dash
 gunicorn
-dash_boootstrap_components
+dash_bootstrap_components
 pandas
 base64
