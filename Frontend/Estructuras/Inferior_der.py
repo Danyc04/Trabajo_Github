@@ -9,7 +9,7 @@ global oferta_der
 
 oferta_der = html.Div([
     html.H3("Aprovecha esta increíble oferta", style={'color':'indigo', 'textAlign': 'center'}),
-    html.Img(src='https://akm-img-a-in.tosshub.com/indiatoday/images/story/202206/kkconcertkol.jpg?VersionId=X69XgQi6xidSzzk93srjDt2DrVFJxghU,{encoded_img}',
-             style={'width': '70%', 'height': 'auto', 'display': 'block', 'margin': 'auto'}),
+    # html.Img(src='https://akm-img-a-in.tosshub.com/indiatoday/images/story/202206/kkconcertkol.jpg?VersionId=X69XgQi6xidSzzk93srjDt2DrVFJxghU,{encoded_img}',
+             # style={'width': '70%', 'height': 'auto', 'display': 'block', 'margin': 'auto'}),
     html.P("Dale click para mayor información", style={'textAlign': 'center'})
 ])
