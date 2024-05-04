@@ -4,7 +4,7 @@ import base64
 
 global oferta_der
 
-with open('bd\imagen 2.png', 'rb') as img_file:
+with open('bd/imagen 2.png', 'rb') as img_file:
     encoded_img = base64.b64encode(img_file.read()).decode('ascii')
 
 oferta_der = html.Div([
