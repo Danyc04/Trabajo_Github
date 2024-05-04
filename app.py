@@ -17,7 +17,7 @@ from Backend.backend import consultarCotizacion
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 app.layout = layout
-
+server = app.server
 @app.callback(
     Output('costo', 'children'),
     Input('buscar', 'n_clicks'),
