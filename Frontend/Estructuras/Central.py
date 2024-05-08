@@ -60,9 +60,8 @@ central_abajo = dbc.Container([
                                   ])),
     html.Div(
         dbc.Row([
-            dbc.Col(html.H3('El valor de la cotización es de: ', style={'color':'darkmagenta'}), md=6),
-            dbc.Col(html.H2(id = 'costo',
-                            style={'textAlign': 'center','color':'darkmagenta'}),
-                            md={'size': 2, 'offset': 1.5}, className='text-center')
+            dbc.Col(html.H3('El valor de la cotización es de: ', style={'color':'darkmagenta', 'offset': 1.5}), md=6),
+            dbc.Col(html.H2(id = 'valor_formateado',
+                            style={'color':'darkmagenta'}),md=6)
                             ]))
             ])
